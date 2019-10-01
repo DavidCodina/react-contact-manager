@@ -4,8 +4,6 @@ import { Consumer } from "../../providers/Context";
 
 
 class Contacts extends Component {
-  //The {value} is coming from the value property assigned to Context.Provider
-  //within the Context component
   render() {
     return (
       <Consumer>

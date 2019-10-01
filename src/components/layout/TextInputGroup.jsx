@@ -1,9 +1,5 @@
 import React         from "react";
 import { PropTypes } from "prop-types";
-
-//Section 5, last video @ 5:40 we install the classnames package:
-//https://www.npmjs.com/package/classnames
-//This is a simple JavaScript utility for conditionally joining classNames together.
 import classnames    from "classnames";
 
 

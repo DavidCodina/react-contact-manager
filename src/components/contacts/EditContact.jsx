@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Consumer } from "../../providers/Context";
-import TextInputGroup from "../layout/TextInputGroup";
-import axios from "axios";
+import { Consumer }         from "../../providers/Context";
+import TextInputGroup       from "../layout/TextInputGroup";
+import axios                from "axios";
 
 
 class EditContact extends Component {
@@ -40,7 +40,6 @@ class EditContact extends Component {
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
 
-
   /* ============================
             onSubmit
   ============================ */
@@ -75,8 +74,9 @@ class EditContact extends Component {
     dispatch({ type: "UPDATE_CONTACT", payload: res.data });
 
 
-    // Clear Form Fields
+    //Clear Form Fields
     this.setState({ name: "", email: "", phone: "", errors: {} });
+
 
     //redirect to the home page with the new contact
     this.props.history.push("/");

@@ -8,19 +8,12 @@ import NotFound    from './components/pages/NotFound';
 import Contacts    from './components/contacts/Contacts';
 import AddContact  from './components/contacts/AddContact';
 import EditContact from './components/contacts/EditContact';
-
-
-//import Test from './components/test/Test';
-
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-//<Route exact path="/test" component={Test}/>
+
 class App extends Component {
   render(){
-
     return (
       <Provider>
         <Router>
@@ -33,9 +26,6 @@ class App extends Component {
                 <Route exact path="/contact/add"      component={AddContact}/>
                 <Route exact path="/contact/edit/:id" component={EditContact}/>
                 <Route exact path="/about"            component={About}/>
-
-
-
                 <Route exact component={NotFound}/>
               </Switch>
             </div>

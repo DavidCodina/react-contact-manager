@@ -57,17 +57,6 @@ class AddContact extends Component {
     };
 
 
-
-    ////////////////////////////////////////////////////////////////////////////
-    //
-    //  Originally, the POST request was not async and we did this:
-    //
-    //    axios.post('https://jsonplaceholder.typicode.com/users', newContact)
-    //    .then(res => dispatch({ type: "ADD_CONTACT", payload: res.data }));
-    //
-    ////////////////////////////////////////////////////////////////////////////
-
-
     //Note: the id that we get back will always be 11 because jsonplaceholder is a mock API.
     const res = await axios.post('https://jsonplaceholder.typicode.com/users', newContact);
     dispatch({ type: "ADD_CONTACT", payload: res.data })

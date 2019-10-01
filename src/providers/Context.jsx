@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios"; //Section 7, video 2 @4:50 we: npm i axios
+import axios                from "axios";
 
 
 const Context = React.createContext();
@@ -30,7 +30,7 @@ const reducer = (state, action) => {
       };
 
     default:
-      return state; //i.e., return an object
+      return state;
   }
 };
 
@@ -47,10 +47,6 @@ export class Provider extends Component {
   };
 
   async componentDidMount(){
-    //Originally, componentDidMount was not async and we did this:
-    //axios.get('https://jsonplaceholder.typicode.com/users')
-    //.then(res => this.setState({contacts: res.data}));
-
     const res = await axios.get('https://jsonplaceholder.typicode.com/users');
     this.setState({ contacts: res.data });
   }
